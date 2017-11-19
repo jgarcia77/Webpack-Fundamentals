@@ -17,8 +17,12 @@
         "jshint": "^2.9.5",
         "jshint-loader": "^0.8.4",
         "node-libs-browser": "^2.1.0",
+        "sass-loader": "^6.0.6",
         "strip-loader": "^0.1.2",
         "style-loader": "^0.19.0",
         "webpack": "^3.8.1"
+    },
+    "dependencies": {
+        "node-sass": "^4.7.1"
     }
 }
