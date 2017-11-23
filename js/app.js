@@ -1,5 +1,11 @@
+require("../css/bootstrap.css");
+require("../css/app.css");
+
 console.log("App loaded");
 
-require("../css/bootstrap.css");
+var img = document.createElement('img');
+img.style.height = "25%";
+img.style.width = "25%";
+img.src = require('../images/webpack-logo.png');
 
-require("../css/app.scss");
+document.getElementById('img_container').appendChild(img);

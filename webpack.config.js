@@ -1,7 +1,5 @@
 var path = require("path");
 
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 module.exports = {
     context: path.resolve("js"),
     entry: ["./app"],
@@ -11,9 +9,6 @@ module.exports = {
         filename: "bundle.js"
     },
     watch: true,
-    plugins: [
-        new ExtractTextPlugin("styles.css")
-    ],
     devServer: {
         contentBase: "public"
     },
@@ -22,21 +17,13 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader']
-                  })
+                loader: "style-loader!css-loader"
             },
             {
-                test: /\.scss$/,
+                test: /\.(png|jpg)$/,
                 exclude: /node_modules/,
-                use: ExtractTextPlugin.extract({
-                  fallback: 'style-loader',
-                  //resolve-url-loader may be chained before sass-loader if necessary
-                  use: ['css-loader', 'sass-loader']
-                })
-              }
+                loader: "url-loader?limit=100000"
+            }
         ]
     },
     resolve: {
