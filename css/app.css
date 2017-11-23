@@ -1,4 +1,13 @@
+@font-face {
+    font-family: '3M Spasynote';
+
+    src: url('../fonts/3M Spasynote.otf');
+    /*src: url('../fonts/Asam_Kelubi.tff');
+    src: url('../fonts/Edyra Demo.tff');*/
+}
+
 body {
+    font-family: '3M Spasynote';
     padding-top: 80px;
 }
 
