@@ -1,4 +1,0 @@
-{
-    // JSON explodes with comments and breaks require()
-    "app_loaded_msg": "This message is loaded from config/config.js"
-}
